@@ -2,8 +2,14 @@
 2 show docker image : docker images
 3 run docker image : docker run -p 5000:5000 app_name 
 4 stop docker image : docker stop image_id
-4 delete docker image : docker rmi image_id
+4 delete docker image : docker rmi name 
     if not working docker rm container_id then give above command
 5 rename the image : docker tag welcome-app vatsbalar22/welcome-app1
 6 login in local machine using command : docker login 
 7 push repo in docker hub : docker push vatsbalar22/welcome-app1:latest    
+8 build ubuntu image : docker pull ubuntu , docker run -it -d -name vats ubuntu, docker ps
+    docker pull image_name of hub
+9 kill container : docker kill container id(kill directly), docker stop c_id(stop step bt step)
+10 restart container : docker restart c_id
+11 remove container : docker rm -f c_id
+12 create image using container : docker commit c_id image name 
