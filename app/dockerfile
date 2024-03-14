@@ -1,0 +1,5 @@
+FROM ubuntu:latest
+WORKDIR /app
+ADD . /app
+CMD python/main.py 
+

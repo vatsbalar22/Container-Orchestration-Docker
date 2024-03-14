@@ -13,3 +13,18 @@
 10 restart container : docker restart c_id
 11 remove container : docker rm -f c_id
 12 create image using container : docker commit c_id image name 
+
+Volume : 
+13 how to create volume : docker volume create volume_name , docker volume ls
+    ckeck : docker volume inspect volume_name
+    remove : docker volume rm volume_name
+    remove all : docker volume prune y
+14 create volume using mountflag : docker run -it -d --name ConA --mount source=volume_name,target=/apps ubuntu 
+        ckeck : docker ps
+        inspect : docker container inspect container_name 
+15 create volume with volume flag : docker run -it -d --name ConB --voume volume_name,/apps ubuntu
+
+
+Network :
+16 network create in docker : docker network create --driver network_type name 
+    show network : docker network ls , docker network inspect name 
