@@ -28,3 +28,14 @@ Volume :
 Network :
 16 network create in docker : docker network create --driver network_type name 
     show network : docker network ls , docker network inspect name 
+
+docker compose :
+    open powershell : [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    then : Start-BitsTransfer -Source "https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-Windows-x86_64.exe" -Destination $Env:ProgramFiles\Docker\docker-compose.exe
+    check : docker compose version
+
+    create folder then create docker file and build image ubntu1 (folder : project-compose for example)
+    create docker-compose.ynl file 
+    command to run : docker-compose up
+    command to stop : docker-compose down
+    
